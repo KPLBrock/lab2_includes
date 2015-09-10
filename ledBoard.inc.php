@@ -101,10 +101,10 @@ function drawLetter($letter, $color) {
 					break;
 					
 				case "F" :
-					if (1) {
+					if ($i < 2 || $j < 2 || $i == 4) {
 						$colorToDisplay = $color;
 						$letterToDisplay = $letter;
-					}
+					}	
 					break;
 					
 				case "G" :
@@ -296,10 +296,10 @@ function drawDigit($digit, $color) {
 					break;
 					
 				case "5" :
-					if (1) {
+					if ($i < 2 || $i > 5 || $i==3 || $i ==4 || ($j<2 && $i<4)  || ($j>5 && $i>4)) {
 						$colorToDisplay = $color;
 						$digitToDisplay = $digit;
-					}
+					}		
 					break;
 					
 				case "6" :
