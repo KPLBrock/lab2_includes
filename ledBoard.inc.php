@@ -1,5 +1,6 @@
 <?php
 
+
 function drawVowel($vowel, $color) {
 
 	$vowel = strtoupper($vowel);
@@ -45,6 +46,13 @@ function drawVowel($vowel, $color) {
 					
 				case "U" :
 					if ($i > 5 || $j < 2 || $j > 5) {
+						$colorToDisplay = $color;
+						$vowelToDisplay = $vowel;
+					}
+					break;
+					
+				case "S" :
+					if ($i < 2 || $i > 5 || ($j < 2 && $i < 5) || ($j > 5 && $i > 3) || ($i > 2 && $i < 5)) {
 						$colorToDisplay = $color;
 						$vowelToDisplay = $vowel;
 					}
