@@ -1,11 +1,11 @@
 <?php
 
-<<<<<<< HEAD
- function drawVowel($vowel, $color) {
-=======
+
+
+
 
 function drawVowel($vowel, $color) {
->>>>>>> 9e77fdaa46d72e664039368cf1b6e1fd686d4f07
+
 
 	$vowel = strtoupper($vowel);
 
@@ -283,12 +283,9 @@ function drawDigit($digit, $color) {
 					if ($j <= 3 && ($i < 1 && $j > 0) || $j == 3 || $j == 4 || $i == 7) {
 						$colorToDisplay = $color;
 						$digitToDisplay = $digit;
-						echo "<td style = 'background-color:$colorToDisplay'>";
-						echo $digitToDisplay;
-						echo "</td>";
-					}else {
-                        echo "<td><br />";
-                    }
+						
+						}
+                    
 					break;
 
 				case "2" :
@@ -349,9 +346,9 @@ function drawDigit($digit, $color) {
 					
 			}  //endSwitch
 			
-			/* echo "<td style = 'background-color:$colorToDisplay'>";
+			echo "<td style = 'background-color:$colorToDisplay'>";
 			echo $digitToDisplay;
-			echo "</td>"; */
+			echo "</td>"; 
 			
 		} //endFor columns
 
@@ -360,4 +357,5 @@ function drawDigit($digit, $color) {
 	echo "</table>";
 
 }
+
 ?>
