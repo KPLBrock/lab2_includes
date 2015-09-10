@@ -101,10 +101,10 @@ function drawLetter($letter, $color) {
 					break;
 					
 				case "F" :
-					if (1) {
+					if ($i < 2 || $j < 2 || $i == 4) {
 						$colorToDisplay = $color;
 						$letterToDisplay = $letter;
-					}
+					}	
 					break;
 					
 				case "G" :
@@ -115,7 +115,7 @@ function drawLetter($letter, $color) {
 					break;
 					
 				case "H" :
-					if (1) {
+					if ($j < 2 || ($i > 2 && $i < 5) || $j >= 6) {
 						$colorToDisplay = $color;
 						$letterToDisplay = $letter;
 					}
@@ -129,9 +129,14 @@ function drawLetter($letter, $color) {
 					break;
 
 				case "K" :
-					if (1) {
+					if ($j < 2 || ($j == (7 - $i)) || ($j == $i) || (($j + 1) == $i) || (($j + 1) == (7 - $i))) {
 						$colorToDisplay = $color;
 						$letterToDisplay = $letter;
+						
+						if(($i == 2 && $j == 2) || ($i == 5 && $j == 2)){
+							$colorToDisplay = "white";
+		   					 $letterToDisplay = "";
+						}
 					}
 					break;
 					
@@ -296,10 +301,10 @@ function drawDigit($digit, $color) {
 					break;
 					
 				case "5" :
-					if (1) {
+					if ($i < 2 || $i > 5 || $i==3 || $i ==4 || ($j<2 && $i<4)  || ($j>5 && $i>4)) {
 						$colorToDisplay = $color;
 						$digitToDisplay = $digit;
-					}
+					}		
 					break;
 					
 				case "6" :
@@ -310,7 +315,9 @@ function drawDigit($digit, $color) {
 					break;
 
 				case "7" :
-					if (1) {
+					if ($i == 0 || ($i == 1 && ($j == 6 || $j == 7)) || ($i == 2 && ($j == 5 || $j == 6)) ||
+					($i == 3 && ($j == 4 || $j == 5)) || ($i == 4 && ($j == 3 || $j == 4)) || ($i == 5 && ($j == 2 || $j == 3)) ||
+					($i == 6 && ($j == 1 || $j == 2)) || ($i == 7 && ($j == 0 || $j == 1))) {
 						$colorToDisplay = $color;
 						$digitToDisplay = $digit;
 					}					
@@ -331,6 +338,10 @@ function drawDigit($digit, $color) {
 					break;
 					
 			}  //endSwitch
+			
+			if ($color == "rainbow"){
+				$color = "rgb(" .rand(0,255) . "," .rand(0,255) . ",".rand(0,255) . ")";
+			}
 			
 			echo "<td style = 'background-color:$colorToDisplay'>";
 			echo $digitToDisplay;
