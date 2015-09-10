@@ -137,9 +137,14 @@ function drawLetter($letter, $color) {
 					break;
 
 				case "K" :
-					if (1) {
+					if ($j < 2 || ($j == (7 - $i)) || ($j == $i) || (($j + 1) == $i) || (($j + 1) == (7 - $i))) {
 						$colorToDisplay = $color;
 						$letterToDisplay = $letter;
+						
+						if(($i == 2 && $j == 2) || ($i == 5 && $j == 2)){
+							$colorToDisplay = "white";
+		   					 $letterToDisplay = "";
+						}
 					}
 					break;
 					
