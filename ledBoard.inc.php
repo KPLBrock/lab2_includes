@@ -1,6 +1,5 @@
 <?php
 
-
 function drawVowel($vowel, $color) {
 
 	$vowel = strtoupper($vowel);
@@ -46,13 +45,6 @@ function drawVowel($vowel, $color) {
 					
 				case "U" :
 					if ($i > 5 || $j < 2 || $j > 5) {
-						$colorToDisplay = $color;
-						$vowelToDisplay = $vowel;
-					}
-					break;
-					
-				case "S" :
-					if ($i < 2 || $i > 5 || ($j < 2 && $i < 5) || ($j > 5 && $i > 3) || ($i > 2 && $i < 5)) {
 						$colorToDisplay = $color;
 						$vowelToDisplay = $vowel;
 					}
@@ -325,7 +317,7 @@ function drawDigit($digit, $color) {
 					break;
 
 				case "8" :
-					if ($i == 0  || $i == 3 || $i == 7 || ($j == 0 && $i!=0)|| $j == 7) {
+					if (1) {
 						$colorToDisplay = $color;
 						$digitToDisplay = $digit;
 					}
@@ -339,6 +331,10 @@ function drawDigit($digit, $color) {
 					break;
 					
 			}  //endSwitch
+			
+			if ($color == "rainbow"){
+				$color = "rgb(" .rand(0,255) . "," .rand(0,255) . ",".rand(0,255) . ")";
+			}
 			
 			echo "<td style = 'background-color:$colorToDisplay'>";
 			echo $digitToDisplay;
