@@ -51,12 +51,6 @@ function drawVowel($vowel, $color) {
 					}
 					break;
 					
-				case "S" :
-					if ($i < 2 || $i > 5 || ($j < 2 && $i < 5) || ($j > 5 && $i > 3) || ($i > 2 && $i < 5)) {
-						$colorToDisplay = $color;
-						$vowelToDisplay = $vowel;
-					}
-					break;
 					
 			}  //endSwitch
 			
@@ -186,11 +180,11 @@ function drawLetter($letter, $color) {
 					break;
 					
 				case "S" :
-					if (1) {
+					if ($i < 2 || $i > 5 || ($j < 2 && $i < 5) || ($j > 5 && $i > 3) || ($i > 2 && $i < 5)) {
 						$colorToDisplay = $color;
-						$letterToDisplay = $letter;
+						$vowelToDisplay = $vowel;
 					}
-					break;	
+					break;
 					
 				case "T" :
 					if (1) {
@@ -249,6 +243,13 @@ function drawLetter($letter, $color) {
 					break;
 
 			}  //endSwitch
+			
+			if ($color == "rainbow") {
+				
+			$color = "rgb(" . rand(0,255) . ", " . rand(0,255) . ", " . rand(0,255) .")";	
+				
+			}
+			
 			
 			echo "<td style = 'background-color:$colorToDisplay'>";
 			echo $letterToDisplay;
