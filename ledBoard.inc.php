@@ -1,5 +1,7 @@
 <?php
-
+function generateRandomColor(){
+	
+}
 function drawVowel($vowel, $color) {
 
 	$vowel = strtoupper($vowel);
@@ -241,6 +243,9 @@ function drawLetter($letter, $color) {
 					break;
 
 			}  //endSwitch
+			if($color=="rainbow"){
+				$color ="rgb(".rand(0,225)."," .rand(0,225).",".rand(0,255).")";
+			}
 			
 			echo "<td style = 'background-color:$colorToDisplay'>";
 			echo $letterToDisplay;
