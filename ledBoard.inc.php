@@ -1,5 +1,9 @@
 <?php
 
+//git pull
+//git add .
+//git commit -m "Adding letter W"
+//git push origin master
 
 function drawVowel($vowel, $color) {
 
@@ -46,13 +50,6 @@ function drawVowel($vowel, $color) {
 					
 				case "U" :
 					if ($i > 5 || $j < 2 || $j > 5) {
-						$colorToDisplay = $color;
-						$vowelToDisplay = $vowel;
-					}
-					break;
-					
-				case "S" :
-					if ($i < 2 || $i > 5 || ($j < 2 && $i < 5) || ($j > 5 && $i > 3) || ($i > 2 && $i < 5)) {
 						$colorToDisplay = $color;
 						$vowelToDisplay = $vowel;
 					}
@@ -237,14 +234,14 @@ function drawLetter($letter, $color) {
 				case "!" :
 					if (1) {
 						$colorToDisplay = $color;
-						$vowelToDisplay = $vowel;
+						$vowelToDisplay = $letter;
 					}
 					break;
 
 				case "?" :
 					if (1) {
 						$colorToDisplay = $color;
-						$vowelToDisplay = $vowel;
+						$vowelToDisplay = $letter;
 					}					
 					break;
 
@@ -325,7 +322,7 @@ function drawDigit($digit, $color) {
 					break;
 
 				case "8" :
-					if ($i == 0  || $i == 3 || $i == 7 || ($j == 0 && $i!=0)|| $j == 7) {
+					if (1) {
 						$colorToDisplay = $color;
 						$digitToDisplay = $digit;
 					}
