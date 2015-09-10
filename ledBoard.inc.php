@@ -303,7 +303,7 @@ function drawDigit($digit, $color) {
 					break;
 					
 				case "6" :
-					if (1) {
+					if ($i < 1 || $j < 2 || $i > 6 || ($i > 3 && $j > 5) || $i == 4) {
 						$colorToDisplay = $color;
 						$digitToDisplay = $digit;
 					}
