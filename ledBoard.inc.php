@@ -275,7 +275,7 @@ function drawDigit($digit, $color) {
 					break;
 
 				case "2" :
-					if($i < 1 || ($j>6 && $i<4) ||$i==3 || $j<1)
+					if($i < 1 || ($j>6 && $i<4) ||$i==3 || ($j<1 && $i>3) || $i==7)
 					{
 						$colorToDisplay = $color;
 						$digitToDisplay = $digit;
