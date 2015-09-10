@@ -199,7 +199,7 @@ function drawLetter($letter, $color) {
 					break;
 
 				case "W" :
-					if (1) {
+					if ($j < 2 || $j > 5 || ($i > 4 && $i < 7 && $j < 3) || ($i > 4 && $i < 7 && $j > 4) || ($i > 3 && $i < 6 && $j > 2 && $j < 5)) {
 						$colorToDisplay = $color;
 						$letterToDisplay = $letter;
 					}
