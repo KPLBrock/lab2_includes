@@ -1,5 +1,6 @@
 <?php
 
+
 function drawVowel($vowel, $color) {
 
 	$vowel = strtoupper($vowel);
@@ -45,6 +46,13 @@ function drawVowel($vowel, $color) {
 					
 				case "U" :
 					if ($i > 5 || $j < 2 || $j > 5) {
+						$colorToDisplay = $color;
+						$vowelToDisplay = $vowel;
+					}
+					break;
+					
+				case "S" :
+					if ($i < 2 || $i > 5 || ($j < 2 && $i < 5) || ($j > 5 && $i > 3) || ($i > 2 && $i < 5)) {
 						$colorToDisplay = $color;
 						$vowelToDisplay = $vowel;
 					}
@@ -129,9 +137,14 @@ function drawLetter($letter, $color) {
 					break;
 
 				case "K" :
-					if (1) {
+					if ($j < 2 || ($j == (7 - $i)) || ($j == $i) || (($j + 1) == $i) || (($j + 1) == (7 - $i))) {
 						$colorToDisplay = $color;
 						$letterToDisplay = $letter;
+						
+						if(($i == 2 && $j == 2) || ($i == 5 && $j == 2)){
+							$colorToDisplay = "white";
+		   					 $letterToDisplay = "";
+						}
 					}
 					break;
 					
@@ -317,7 +330,7 @@ function drawDigit($digit, $color) {
 					break;
 
 				case "8" :
-					if (1) {
+					if ($i == 0  || $i == 3 || $i == 7 || ($j == 0 && $i!=0)|| $j == 7) {
 						$colorToDisplay = $color;
 						$digitToDisplay = $digit;
 					}
