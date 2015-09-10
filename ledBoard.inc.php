@@ -330,7 +330,7 @@ function drawDigit($digit, $color) {
 					break;
 
 				case "8" :
-					if (1) {
+					if ($i == 0  || $i == 3 || $i == 7 || ($j == 0 && $i!=0)|| $j == 7) {
 						$colorToDisplay = $color;
 						$digitToDisplay = $digit;
 					}
