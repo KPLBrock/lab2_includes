@@ -64,6 +64,8 @@ function drawVowel($vowel, $color) {
 
 }
 
+
+
 function drawLetter($letter, $color) {
 
 	$letter = strtoupper($letter);
@@ -87,7 +89,7 @@ function drawLetter($letter, $color) {
 					break;
 
 				case "C" :
-					if (1) {
+					if ($i < 2 || $j < 2 || ($i != 2) && ($i!=3) &&($i!=4) && ($i!=5)) {
 						$colorToDisplay = $color;
 						$letterToDisplay = $letter;
 					}					
