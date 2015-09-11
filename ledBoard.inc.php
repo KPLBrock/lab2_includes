@@ -1,11 +1,7 @@
 <?php
 
 
-
-
-
 function drawVowel($vowel, $color) {
-
 
 	$vowel = strtoupper($vowel);
 
@@ -54,8 +50,22 @@ function drawVowel($vowel, $color) {
 						$vowelToDisplay = $vowel;
 					}
 					break;
+<<<<<<< HEAD
 
 
+=======
+<<<<<<< HEAD
+					
+				case "S" :
+					if ($i < 2 || $i > 5 || ($j < 2 && $i < 5) || ($j > 5 && $i > 3) || ($i > 2 && $i < 5)) {
+						$colorToDisplay = $color;
+						$vowelToDisplay = $vowel;
+					}
+=======
+
+
+>>>>>>> 08c67246d0ced9ab5fbed255bd5643c1e417d941
+>>>>>>> 81167932690d4e368729268d0553b75deee58351
 					break;
 
 			}  //endSwitch
@@ -88,7 +98,7 @@ function drawLetter($letter, $color) {
 			switch($letter) {
 
 				case "B" :
-					if ( $i == 4) {
+					if ( $i == 1 || $i==8 || $j==1 || $j==4 || $j==8) {
 						$colorToDisplay = $color;
 						$letterToDisplay = $letter;
 					}
@@ -137,14 +147,20 @@ function drawLetter($letter, $color) {
 					break;
 
 				case "K" :
-					if ($j < 2 || ($j == (7 - $i)) || ($j == $i) || (($j + 1) == $i) || (($j + 1) == (7 - $i))) {
+					if (1) {
 						$colorToDisplay = $color;
 						$letterToDisplay = $letter;
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> 81167932690d4e368729268d0553b75deee58351
 
 						if(($i == 2 && $j == 2) || ($i == 5 && $j == 2)){
 							$colorToDisplay = "white";
 		   					 $letterToDisplay = "";
 						}
+>>>>>>> 08c67246d0ced9ab5fbed255bd5643c1e417d941
 					}
 					break;
 
@@ -191,9 +207,9 @@ function drawLetter($letter, $color) {
 					break;
 
 				case "S" :
-					if ($i < 2 || $i > 5 || ($j < 2 && $i < 5) || ($j > 5 && $i > 3) || ($i > 2 && $i < 5)) {
+					if (1) {
 						$colorToDisplay = $color;
-						$vowelToDisplay = $vowel;
+						$letterToDisplay = $letter;
 					}
 					break;
 
@@ -240,7 +256,7 @@ function drawLetter($letter, $color) {
 					break;
 
 				case "!" :
-					if (1) {
+					if ($i == 4 && $j != 4 && $j != 5) {
 						$colorToDisplay = $color;
 						$vowelToDisplay = $vowel;
 					}
@@ -254,11 +270,29 @@ function drawLetter($letter, $color) {
 					break;
 
 			}  //endSwitch
+<<<<<<< HEAD
 
 			if(color == "rainbow"){
 				$color = "rgb(" . rand(0,255) . "," . rand(0,255) . "," . rand(0,255) .")"; //or can use my radom hex function
 			}
 
+=======
+<<<<<<< HEAD
+			
+=======
+
+			if($color=="rainbow"){
+				$color ="rgb(".rand(0,225)."," .rand(0,225).",".rand(0,255).")";
+			}
+
+			if ($color == "rainbow") {
+
+			$color = "rgb(" . rand(0,255) . ", " . rand(0,255) . ", " . rand(0,255) .")";
+
+			}
+
+>>>>>>> 08c67246d0ced9ab5fbed255bd5643c1e417d941
+>>>>>>> 81167932690d4e368729268d0553b75deee58351
 			echo "<td style = 'background-color:$colorToDisplay'>";
 			echo $letterToDisplay;
 			echo "</td>";
@@ -285,12 +319,22 @@ function drawDigit($digit, $color) {
 			switch($digit) {
 
 				case "1" :
-					if ($j <= 3 && ($i < 1 && $j > 0) || $j == 3 || $j == 4 || $i == 7) {
+					if (1) {
 						$colorToDisplay = $color;
 						$digitToDisplay = $digit;
+<<<<<<< HEAD
 
 						}
 
+=======
+<<<<<<< HEAD
+					}
+=======
+
+						}
+
+>>>>>>> 08c67246d0ced9ab5fbed255bd5643c1e417d941
+>>>>>>> 81167932690d4e368729268d0553b75deee58351
 					break;
 
 				case "2" :
@@ -336,7 +380,7 @@ function drawDigit($digit, $color) {
 					break;
 
 				case "8" :
-					if ($i == 0  || $i == 3 || $i == 7 || ($j == 0 && $i!=0)|| $j == 7) {
+					if (1) {
 						$colorToDisplay = $color;
 						$digitToDisplay = $digit;
 					}
@@ -350,11 +394,30 @@ function drawDigit($digit, $color) {
 					break;
 
 			}  //endSwitch
+<<<<<<< HEAD
 
 			echo "<td style = 'background-color:$colorToDisplay'>";
 			echo $digitToDisplay;
 			echo "</td>"; 
 
+=======
+<<<<<<< HEAD
+			
+			echo "<td style = 'background-color:$colorToDisplay'>";
+			echo $digitToDisplay;
+			echo "</td>";
+			
+=======
+
+			if ($color == "rainbow"){
+				$color = "rgb(" .rand(0,255) . "," .rand(0,255) . ",".rand(0,255) . ")";
+			}
+			echo "<td style = 'background-color:$colorToDisplay'>";
+			echo $digitToDisplay;
+			echo "</td>";
+
+>>>>>>> 08c67246d0ced9ab5fbed255bd5643c1e417d941
+>>>>>>> 81167932690d4e368729268d0553b75deee58351
 		} //endFor columns
 
 		echo "</tr>";
@@ -362,5 +425,12 @@ function drawDigit($digit, $color) {
 	echo "</table>";
 
 }
+<<<<<<< HEAD
+?>
+=======
 
 ?>
+<<<<<<< HEAD
+=======
+>>>>>>> 08c67246d0ced9ab5fbed255bd5643c1e417d941
+>>>>>>> 81167932690d4e368729268d0553b75deee58351
