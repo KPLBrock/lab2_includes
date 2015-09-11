@@ -361,7 +361,7 @@ function drawDigit($digit, $color) {
 					break;
 
 				case "9" :
-					if (1) {
+					if ($i == 0 || $i == 3  || $j > 6 || $j == 0 && $i <4 ) {
 						$colorToDisplay = $color;
 						$digitToDisplay = $digit;
 					}
