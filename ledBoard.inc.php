@@ -27,7 +27,7 @@ function drawVowel($vowel, $color) {
 					if ($i < 2 || $j < 2 || ($i != 2 && $i != 5)) {
 						$colorToDisplay = $color;
 						$vowelToDisplay = $vowel;
-					}					
+					}
 					break;
 
 				case "I" :
@@ -36,34 +36,39 @@ function drawVowel($vowel, $color) {
 						$vowelToDisplay = $vowel;
 					}
 					break;
-					
+
 				case "O" :
 					if ($i < 2 || $i > 5 || $j < 2 || $j > 5) {
 						$colorToDisplay = $color;
 						$vowelToDisplay = $vowel;
 					}
 					break;
-					
+
 				case "U" :
 					if ($i > 5 || $j < 2 || $j > 5) {
 						$colorToDisplay = $color;
 						$vowelToDisplay = $vowel;
 					}
 					break;
+<<<<<<< HEAD
 					
 				case "S" :
 					if ($i < 2 || $i > 5 || ($j < 2 && $i < 5) || ($j > 5 && $i > 3) || ($i > 2 && $i < 5)) {
 						$colorToDisplay = $color;
 						$vowelToDisplay = $vowel;
 					}
+=======
+
+
+>>>>>>> 08c67246d0ced9ab5fbed255bd5643c1e417d941
 					break;
-					
+
 			}  //endSwitch
-			
+
 			echo "<td style = 'background-color:$colorToDisplay'>";
 			echo $vowelToDisplay;
 			echo "</td>";
-			
+
 		} //endFor columns
 
 		echo "</tr>";
@@ -98,7 +103,7 @@ function drawLetter($letter, $color) {
 					if (1) {
 						$colorToDisplay = $color;
 						$letterToDisplay = $letter;
-					}					
+					}
 					break;
 
 				case "D" :
@@ -107,21 +112,21 @@ function drawLetter($letter, $color) {
 						$letterToDisplay = $letter;
 					}
 					break;
-					
+
 				case "F" :
 					if (1) {
 						$colorToDisplay = $color;
 						$letterToDisplay = $letter;
 					}
 					break;
-					
+
 				case "G" :
 					if (1) {
 						$colorToDisplay = $color;
 						$letterToDisplay = $letter;
 					}
 					break;
-					
+
 				case "H" :
 					if (1) {
 						$colorToDisplay = $color;
@@ -133,30 +138,38 @@ function drawLetter($letter, $color) {
 					if (1) {
 						$colorToDisplay = $color;
 						$letterToDisplay = $letter;
-					}					
+					}
 					break;
 
 				case "K" :
 					if (1) {
 						$colorToDisplay = $color;
 						$letterToDisplay = $letter;
+<<<<<<< HEAD
+=======
+
+						if(($i == 2 && $j == 2) || ($i == 5 && $j == 2)){
+							$colorToDisplay = "white";
+		   					 $letterToDisplay = "";
+						}
+>>>>>>> 08c67246d0ced9ab5fbed255bd5643c1e417d941
 					}
 					break;
-					
+
 				case "L" :
 					if (1) {
 						$colorToDisplay = $color;
 						$letterToDisplay = $letter;
 					}
 					break;
-					
+
 				case "M" :
 					if (1) {
 						$colorToDisplay = $color;
 						$letterToDisplay = $letter;
 					}
 					break;
-					
+
 				case "N" :
 					if (1) {
 						$colorToDisplay = $color;
@@ -168,7 +181,7 @@ function drawLetter($letter, $color) {
 					if (1) {
 						$colorToDisplay = $color;
 						$letterToDisplay = $letter;
-					}					
+					}
 					break;
 
 				case "Q" :
@@ -177,21 +190,21 @@ function drawLetter($letter, $color) {
 						$letterToDisplay = $letter;
 					}
 					break;
-					
+
 				case "R" :
 					if (1) {
 						$colorToDisplay = $color;
 						$letterToDisplay = $letter;
 					}
 					break;
-					
+
 				case "S" :
 					if (1) {
 						$colorToDisplay = $color;
 						$letterToDisplay = $letter;
 					}
-					break;	
-					
+					break;
+
 				case "T" :
 					if (1) {
 						$colorToDisplay = $color;
@@ -203,7 +216,7 @@ function drawLetter($letter, $color) {
 					if (1) {
 						$colorToDisplay = $color;
 						$letterToDisplay = $letter;
-					}					
+					}
 					break;
 
 				case "W" :
@@ -212,30 +225,30 @@ function drawLetter($letter, $color) {
 						$letterToDisplay = $letter;
 					}
 					break;
-					
+
 				case "X" :
 					if (1) {
 						$colorToDisplay = $color;
 						$letterToDisplay = $letter;
 					}
 					break;
-					
+
 				case "Y" :
 					if (1) {
 						$colorToDisplay = $color;
 						$letterToDisplay = $letter;
 					}
 					break;
-					
+
 				case "Z" :
 					if (1) {
 						$colorToDisplay = $color;
 						$letterToDisplay = $letter;
 					}
-					break;					
-					
+					break;
+
 				case "!" :
-					if (1) {
+					if ($i == 4 && $j != 4 && $j != 5) {
 						$colorToDisplay = $color;
 						$vowelToDisplay = $vowel;
 					}
@@ -245,15 +258,29 @@ function drawLetter($letter, $color) {
 					if (1) {
 						$colorToDisplay = $color;
 						$vowelToDisplay = $vowel;
-					}					
+					}
 					break;
 
 			}  //endSwitch
+<<<<<<< HEAD
 			
+=======
+
+			if($color=="rainbow"){
+				$color ="rgb(".rand(0,225)."," .rand(0,225).",".rand(0,255).")";
+			}
+
+			if ($color == "rainbow") {
+
+			$color = "rgb(" . rand(0,255) . ", " . rand(0,255) . ", " . rand(0,255) .")";
+
+			}
+
+>>>>>>> 08c67246d0ced9ab5fbed255bd5643c1e417d941
 			echo "<td style = 'background-color:$colorToDisplay'>";
 			echo $letterToDisplay;
 			echo "</td>";
-			
+
 		} //endFor columns
 
 		echo "</tr>";
@@ -279,14 +306,20 @@ function drawDigit($digit, $color) {
 					if (1) {
 						$colorToDisplay = $color;
 						$digitToDisplay = $digit;
+<<<<<<< HEAD
 					}
+=======
+
+						}
+
+>>>>>>> 08c67246d0ced9ab5fbed255bd5643c1e417d941
 					break;
 
 				case "2" :
 					if ( $i == 4) {
 						$colorToDisplay = $color;
 						$digitToDisplay = $digit;
-					}					
+					}
 					break;
 
 				case "3" :
@@ -295,21 +328,21 @@ function drawDigit($digit, $color) {
 						$digitToDisplay = $digit;
 					}
 					break;
-					
+
 				case "4" :
 					if (1) {
 						$colorToDisplay = $color;
 						$digitToDisplay = $digit;
 					}
 					break;
-					
+
 				case "5" :
 					if (1) {
 						$colorToDisplay = $color;
 						$digitToDisplay = $digit;
 					}
 					break;
-					
+
 				case "6" :
 					if (1) {
 						$colorToDisplay = $color;
@@ -321,7 +354,7 @@ function drawDigit($digit, $color) {
 					if (1) {
 						$colorToDisplay = $color;
 						$digitToDisplay = $digit;
-					}					
+					}
 					break;
 
 				case "8" :
@@ -330,20 +363,31 @@ function drawDigit($digit, $color) {
 						$digitToDisplay = $digit;
 					}
 					break;
-					
+
 				case "9" :
 					if (1) {
 						$colorToDisplay = $color;
 						$digitToDisplay = $digit;
 					}
 					break;
-					
+
 			}  //endSwitch
+<<<<<<< HEAD
 			
 			echo "<td style = 'background-color:$colorToDisplay'>";
 			echo $digitToDisplay;
 			echo "</td>";
 			
+=======
+
+			if ($color == "rainbow"){
+				$color = "rgb(" .rand(0,255) . "," .rand(0,255) . ",".rand(0,255) . ")";
+			}
+			echo "<td style = 'background-color:$colorToDisplay'>";
+			echo $digitToDisplay;
+			echo "</td>";
+
+>>>>>>> 08c67246d0ced9ab5fbed255bd5643c1e417d941
 		} //endFor columns
 
 		echo "</tr>";
@@ -351,4 +395,9 @@ function drawDigit($digit, $color) {
 	echo "</table>";
 
 }
+<<<<<<< HEAD
 ?>
+=======
+
+?>
+>>>>>>> 08c67246d0ced9ab5fbed255bd5643c1e417d941
