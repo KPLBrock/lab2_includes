@@ -95,7 +95,7 @@ function drawLetter($letter, $color) {
 					break;
 
 				case "C" :
-					if (1) {
+					if ($i < 2 || $j < 2 || ($i != 2) && ($i!=3) &&($i!=4) && ($i!=5)) {
 						$colorToDisplay = $color;
 						$letterToDisplay = $letter;
 					}					
@@ -109,7 +109,7 @@ function drawLetter($letter, $color) {
 					break;
 					
 				case "F" :
-					if (1) {
+					if ($i < 2 || $j < 2 || $i == 4) {
 						$colorToDisplay = $color;
 						$letterToDisplay = $letter;
 					}
@@ -123,7 +123,7 @@ function drawLetter($letter, $color) {
 					break;
 					
 				case "H" :
-					if (1) {
+					if ($j < 2 || ($i > 2 && $i < 5) || $j >= 6) {
 						$colorToDisplay = $color;
 						$letterToDisplay = $letter;
 					}
@@ -219,7 +219,7 @@ function drawLetter($letter, $color) {
 					break;
 					
 				case "X" :
-					if (1) {
+					if ($i == $j || ($i+$j) == 7) {
 						$colorToDisplay = $color;
 						$letterToDisplay = $letter;
 					}
@@ -255,8 +255,14 @@ function drawLetter($letter, $color) {
 
 			}  //endSwitch
 			
-			if(color == "rainbow"){
-				$color = "rgb(" . rand(0,255) . "," . rand(0,255) . "," . rand(0,255) .")"; //or can use my radom hex function
+			if($color=="rainbow"){
+				$color ="rgb(".rand(0,225)."," .rand(0,225).",".rand(0,255).")";
+			}
+			
+			if ($color == "rainbow") {
+				
+			$color = "rgb(" . rand(0,255) . ", " . rand(0,255) . ", " . rand(0,255) .")";	
+				
 			}
 			
 			echo "<td style = 'background-color:$colorToDisplay'>";
@@ -294,7 +300,7 @@ function drawDigit($digit, $color) {
 					break;
 
 				case "2" :
-					if ( $i == 4) {
+					if ($i < 1 || ($j>6 && $i<4) ||$i==3 || ($j<1 && $i>3) || $i==7) {
 						$colorToDisplay = $color;
 						$digitToDisplay = $digit;
 					}					
@@ -315,7 +321,7 @@ function drawDigit($digit, $color) {
 					break;
 					
 				case "5" :
-					if (1) {
+					if ($i < 2 || $i > 5 || $i==3 || $i ==4 || ($j<2 && $i<4)  || ($j>5 && $i>4)) {
 						$colorToDisplay = $color;
 						$digitToDisplay = $digit;
 					}
@@ -329,7 +335,9 @@ function drawDigit($digit, $color) {
 					break;
 
 				case "7" :
-					if (1) {
+					if ($i == 0 || ($i == 1 && ($j == 6 || $j == 7)) || ($i == 2 && ($j == 5 || $j == 6)) ||
+					($i == 3 && ($j == 4 || $j == 5)) || ($i == 4 && ($j == 3 || $j == 4)) || ($i == 5 && ($j == 2 || $j == 3)) ||
+					($i == 6 && ($j == 1 || $j == 2)) || ($i == 7 && ($j == 0 || $j == 1))) {
 						$colorToDisplay = $color;
 						$digitToDisplay = $digit;
 					}					
@@ -351,7 +359,9 @@ function drawDigit($digit, $color) {
 					
 			}  //endSwitch
 			
-			
+			if ($color == "rainbow"){
+				$color = "rgb(" .rand(0,255) . "," .rand(0,255) . ",".rand(0,255) . ")";
+			}
 			echo "<td style = 'background-color:$colorToDisplay'>";
 			echo $digitToDisplay;
 			echo "</td>"; 
