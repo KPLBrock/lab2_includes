@@ -53,6 +53,8 @@ function drawVowel($vowel, $color) {
 			echo "<td style = 'background-color:$colorToDisplay'>";
 			echo $vowelToDisplay;
 			echo "</td>";
+			
+			} //endSwitch --This was removed by accident.
 
 		}//endFor columns
 
