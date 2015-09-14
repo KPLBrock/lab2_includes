@@ -217,11 +217,11 @@ function drawLetter($letter, $color) {
 					break;
 
 				case "Y" :
-					if (1) {
-						$colorToDisplay = $color;
-						$letterToDisplay = $letter;
-					}
-					break;
+				if ($i > 2 && $j == 3 || $i > 2 && $j == 4 || $i < 4 && $j < 3  || $i < 4 && $j > 4) {
+					$colorToDisplay = $color;
+					$letterToDisplay = $letter;
+				}
+				break;
 
 				case "Z" :
 					if (1) {
