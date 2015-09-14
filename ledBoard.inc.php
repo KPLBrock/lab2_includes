@@ -190,7 +190,7 @@ function drawLetter($letter, $color) {
 				case "S" :
 					if ($i < 2 || $i > 5 || ($j < 2 && $i < 5) || ($j > 5 && $i > 3) || ($i > 2 && $i < 5)) {
 						$colorToDisplay = $color;
-						$vowelToDisplay = $letter;
+						$letterToDisplay = $letter;
 					}
 					break;
 
