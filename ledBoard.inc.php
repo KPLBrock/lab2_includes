@@ -11,8 +11,8 @@ function drawVowel($vowel, $color) {
 		echo "<tr>";
 
 		for ($j = 0; $j < 8; $j++) {//Controls columns
-            $colorToDisplay = "white";
-		    $vowelToDisplay = "";
+			$colorToDisplay = "white";
+			$vowelToDisplay = "";
 			switch($vowel) {
 
 				case "A" :
@@ -50,25 +50,19 @@ function drawVowel($vowel, $color) {
 					}
 					break;
 
-					
-				case "S" :
-					if ($i < 2 || $i > 5 || ($j < 2 && $i < 5) || ($j > 5 && $i > 3) || ($i > 2 && $i < 5)) {
-						$colorToDisplay = $color;
-						$vowelToDisplay = $vowel;
-					}
+			}//endSwitch
 
-					break;
-
-			}  //endSwitch
-
+			if ($colorToDisplay == "rainbow") {
+				$colorToDisplay = "rgb(" . rand(0, 255) . ", " . rand(0, 255) . ", " . rand(0, 255) . ")";
+			}
 			echo "<td style = 'background-color:$colorToDisplay'>";
 			echo $vowelToDisplay;
 			echo "</td>";
 
-		} //endFor columns
+		}//endFor columns
 
 		echo "</tr>";
-	} //endFor rows
+	}//endFor rows
 	echo "</table>";
 
 }
@@ -84,13 +78,12 @@ function drawLetter($letter, $color) {
 		echo "<tr>";
 
 		for ($j = 0; $j < 8; $j++) {//Controls columns
-            $colorToDisplay = "white";
-		    $letterToDisplay = "";
+			$colorToDisplay = "white";
+			$letterToDisplay = "";
 			switch($letter) {
 
 				case "B" :
-					if ( $i == 0 ||$i==3 || $i==7 || $j==0 || $j==7) 
-					{
+					if ($i == 0 || $i == 3 || $i == 7 || $j == 0 || $j == 7) {
 						$colorToDisplay = $color;
 						$letterToDisplay = $letter;
 					}
@@ -114,7 +107,7 @@ function drawLetter($letter, $color) {
 					if ($i < 2 || $j < 2 || $i == 4) {
 						$colorToDisplay = $color;
 						$letterToDisplay = $letter;
-					}	
+					}
 					break;
 
 				case "G" :
@@ -202,16 +195,11 @@ function drawLetter($letter, $color) {
 					break;
 
 				case "V" :
+					if (($i < 2 && ($j < 2 || $j > 5)) || (($i > 1 && $i < 4) && (($j > 0 && $j < 3) || ($j > 4 && $j < 7))) || (($i > 3 && $i < 6) && (($j > 1 && $j < 6))) || (($i > 5 && $i < 8) && (($j > 2 && $j < 5)))) {
+						$colorToDisplay = $color;
+						$letterToDisplay = $letter;
 
-					if (    ( $i < 2 && ( $j < 2 || $j > 5) ) ||
-					   ( ($i > 1 && $i < 4) && (( $j > 0  && $j < 3)|| ($j > 4  && $j < 7) ) ) ||
-					   ( ($i > 3 && $i < 6) && (( $j > 1 && $j < 6))) ||
-					   ( ($i > 5 && $i < 8) && (( $j > 2 && $j < 5)))  )
-					 {
-							$colorToDisplay = $color;
-							$letterToDisplay = $letter;
-
-                                         }
+					}
 					break;
 
 				case "W" :
@@ -222,7 +210,7 @@ function drawLetter($letter, $color) {
 					break;
 
 				case "X" :
-					if ($i == $j || ($i+$j) == 7) {
+					if ($i == $j || ($i + $j) == 7) {
 						$colorToDisplay = $color;
 						$letterToDisplay = $letter;
 					}
@@ -253,25 +241,21 @@ function drawLetter($letter, $color) {
 					if (1) {
 						$colorToDisplay = $color;
 						$vowelToDisplay = $letter;
-					}					
+					}
 					break;
+			}//endSwitch
 
-			}  //endSwitch
-			
-			
-			if ($color == "rainbow") {
-
-			$color = "rgb(" . rand(0,255) . ", " . rand(0,255) . ", " . rand(0,255) .")";
-
+			if ($colorToDisplay == "rainbow") {
+				$colorToDisplay = "rgb(" . rand(0, 255) . ", " . rand(0, 255) . ", " . rand(0, 255) . ")";
 			}
 			echo "<td style = 'background-color:$colorToDisplay'>";
 			echo $letterToDisplay;
 			echo "</td>";
 
-		} //endFor columns
+		}//endFor columns
 
 		echo "</tr>";
-	} //endFor rows
+	}//endFor rows
 	echo "</table>";
 
 }
@@ -285,20 +269,20 @@ function drawDigit($digit, $color) {
 		echo "<tr>";
 
 		for ($j = 0; $j < 8; $j++) {//Controls columns
-            $colorToDisplay = "white";
-		    $digitToDisplay = "";
+			$colorToDisplay = "white";
+			$digitToDisplay = "";
 			switch($digit) {
 
 				case "1" :
 					if (1) {
 						$colorToDisplay = $color;
 						$digitToDisplay = $digit;
-						}
+					}
 
 					break;
-	
+
 				case "2" :
-					if ( $i == 4) {
+					if ($i == 4) {
 						$colorToDisplay = $color;
 						$digitToDisplay = $digit;
 					}
@@ -319,10 +303,10 @@ function drawDigit($digit, $color) {
 					break;
 
 				case "5" :
-					if ($i < 2 || $i > 5 || $i==3 || $i ==4 || ($j<2 && $i<4)  || ($j>5 && $i>4)) {
+					if ($i < 2 || $i > 5 || $i == 3 || $i == 4 || ($j < 2 && $i < 4) || ($j > 5 && $i > 4)) {
 						$colorToDisplay = $color;
 						$digitToDisplay = $digit;
-					}		
+					}
 					break;
 
 				case "6" :
@@ -333,9 +317,7 @@ function drawDigit($digit, $color) {
 					break;
 
 				case "7" :
-					if ($i == 0 || ($i == 1 && ($j == 6 || $j == 7)) || ($i == 2 && ($j == 5 || $j == 6)) ||
-					($i == 3 && ($j == 4 || $j == 5)) || ($i == 4 && ($j == 3 || $j == 4)) || ($i == 5 && ($j == 2 || $j == 3)) ||
-					($i == 6 && ($j == 1 || $j == 2)) || ($i == 7 && ($j == 0 || $j == 1))) {
+					if ($i == 0 || ($i == 1 && ($j == 6 || $j == 7)) || ($i == 2 && ($j == 5 || $j == 6)) || ($i == 3 && ($j == 4 || $j == 5)) || ($i == 4 && ($j == 3 || $j == 4)) || ($i == 5 && ($j == 2 || $j == 3)) || ($i == 6 && ($j == 1 || $j == 2)) || ($i == 7 && ($j == 0 || $j == 1))) {
 						$colorToDisplay = $color;
 						$digitToDisplay = $digit;
 					}
@@ -349,42 +331,24 @@ function drawDigit($digit, $color) {
 					break;
 
 				case "9" :
-					if ($i == 0 || $i == 3  || $j > 6 || $j == 0 && $i <4 ) {
+					if ($i == 0 || $i == 3 || $j > 6 || $j == 0 && $i < 4) {
 						$colorToDisplay = $color;
 						$digitToDisplay = $digit;
 					}
 					break;
+			}//endSwitch
 
-			}  //endSwitch
-
-			echo "<td style = 'background-color:$colorToDisplay'>";
-			echo $digitToDisplay;
-			echo "</td>"; 
-
-
-			
-			if ($color == "rainbow"){
-				$color = "rgb(" .rand(0,255) . "," .rand(0,255) . ",".rand(0,255) . ")";
-			}
-			
-			echo "<td style = 'background-color:$colorToDisplay'>";
-			echo $digitToDisplay;
-			echo "</td>";
-			
-
-			if ($color == "rainbow"){
-				$color = "rgb(" .rand(0,255) . "," .rand(0,255) . ",".rand(0,255) . ")";
+			if ($colorToDisplay == "rainbow") {
+				$colorToDisplay = "rgb(" . rand(0, 255) . ", " . rand(0, 255) . ", " . rand(0, 255) . ")";
 			}
 			echo "<td style = 'background-color:$colorToDisplay'>";
 			echo $digitToDisplay;
 			echo "</td>";
 
-
-		} //endFor columns
+		}//endFor columns
 
 		echo "</tr>";
-	 //endFor rows
-	echo "</table>";
-	}
-	}
+	}//endFor rows
+	echo "</table>\n";
+}
 ?>
