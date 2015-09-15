@@ -49,12 +49,14 @@ function drawVowel($vowel, $color) {
 						$vowelToDisplay = $vowel;
 					}
 					break;
+					
+				} //endSwitch --This was removed by accident.
 
 			echo "<td style = 'background-color:$colorToDisplay'>";
 			echo $vowelToDisplay;
 			echo "</td>";
 			
-			} //endSwitch --This was removed by accident.
+			
 
 		}//endFor columns
 
