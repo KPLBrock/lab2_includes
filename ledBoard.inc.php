@@ -26,18 +26,27 @@ function drawVowel($vowel, $color) {
 						$vowelToDisplay = $vowel;
 					}
 					break;
+<<<<<<< HEAD
+=======
+
+>>>>>>> refs/remotes/origin/master
 				case "O" :
 					if ($i < 2 || $i > 5 || $j < 2 || $j > 5) {
 						$colorToDisplay = $color;
 						$vowelToDisplay = $vowel;
 					}
 					break;
+<<<<<<< HEAD
+=======
+
+>>>>>>> refs/remotes/origin/master
 				case "U" :
 					if ($i > 5 || $j < 2 || $j > 5) {
 						$colorToDisplay = $color;
 						$vowelToDisplay = $vowel;
 					}
 					break;
+<<<<<<< HEAD
 			}//endSwitch
 			if ($colorToDisplay == "rainbow") {
 				$colorToDisplay = "rgb(" . rand(0, 255) . ", " . rand(0, 255) . ", " . rand(0, 255) . ")";
@@ -46,6 +55,19 @@ function drawVowel($vowel, $color) {
 			echo $vowelToDisplay;
 			echo "</td>";
 		}//endFor columns
+=======
+					
+				} //endSwitch --This was removed by accident.
+
+			echo "<td style = 'background-color:$colorToDisplay'>";
+			echo $vowelToDisplay;
+			echo "</td>";
+			
+			
+
+		}//endFor columns
+
+>>>>>>> refs/remotes/origin/master
 		echo "</tr>";
 	}//endFor rows
 	echo "</table>";
@@ -77,18 +99,30 @@ function drawLetter($letter, $color) {
 						$letterToDisplay = $letter;
 					}
 					break;
+<<<<<<< HEAD
+=======
+
+>>>>>>> refs/remotes/origin/master
 				case "F" :
 					if ($i < 2 || $j < 2 || $i == 4) {
 						$colorToDisplay = $color;
 						$letterToDisplay = $letter;
 					}
 					break;
+<<<<<<< HEAD
+=======
+
+>>>>>>> refs/remotes/origin/master
 				case "G" :
 					if (1) {
 						$colorToDisplay = $color;
 						$letterToDisplay = $letter;
 					}
 					break;
+<<<<<<< HEAD
+=======
+
+>>>>>>> refs/remotes/origin/master
 				case "H" :
 					if ($j < 2 || ($i > 2 && $i < 5) || $j >= 6) {
 						$colorToDisplay = $color;
@@ -107,18 +141,30 @@ function drawLetter($letter, $color) {
 						$letterToDisplay = $letter;
 					}
 					break;
+<<<<<<< HEAD
+=======
+
+>>>>>>> refs/remotes/origin/master
 				case "L" :
 					if (1) {
 						$colorToDisplay = $color;
 						$letterToDisplay = $letter;
 					}
 					break;
+<<<<<<< HEAD
+=======
+
+>>>>>>> refs/remotes/origin/master
 				case "M" :
 					if (1) {
 						$colorToDisplay = $color;
 						$letterToDisplay = $letter;
 					}
 					break;
+<<<<<<< HEAD
+=======
+
+>>>>>>> refs/remotes/origin/master
 				case "N" :
 					if (1) {
 						$colorToDisplay = $color;
@@ -137,18 +183,30 @@ function drawLetter($letter, $color) {
 						$letterToDisplay = $letter;
 					}
 					break;
+<<<<<<< HEAD
+=======
+
+>>>>>>> refs/remotes/origin/master
 				case "R" :
 					if (1) {
 						$colorToDisplay = $color;
 						$letterToDisplay = $letter;
 					}
 					break;
+<<<<<<< HEAD
+=======
+
+>>>>>>> refs/remotes/origin/master
 				case "S" :
 					if ($i < 2 || $i > 5 || ($j < 2 && $i < 5) || ($j > 5 && $i > 3) || ($i > 2 && $i < 5)) {
 						$colorToDisplay = $color;
 						$letterToDisplay = $letter;
 					}
 					break;
+<<<<<<< HEAD
+=======
+
+>>>>>>> refs/remotes/origin/master
 				case "T" :
 					if ($i < 2 || ($j > 2 && $j < 5)) {
 						$colorToDisplay = "$color";
@@ -159,6 +217,10 @@ function drawLetter($letter, $color) {
 					if (($i < 2 && ($j < 2 || $j > 5)) || (($i > 1 && $i < 4) && (($j > 0 && $j < 3) || ($j > 4 && $j < 7))) || (($i > 3 && $i < 6) && (($j > 1 && $j < 6))) || (($i > 5 && $i < 8) && (($j > 2 && $j < 5)))) {
 						$colorToDisplay = $color;
 						$letterToDisplay = $letter;
+<<<<<<< HEAD
+=======
+
+>>>>>>> refs/remotes/origin/master
 					}
 					break;
 				case "W" :
@@ -167,24 +229,40 @@ function drawLetter($letter, $color) {
 						$letterToDisplay = $letter;
 					}
 					break;
+<<<<<<< HEAD
+=======
+
+>>>>>>> refs/remotes/origin/master
 				case "X" :
 					if ($i == $j || ($i + $j) == 7) {
 						$colorToDisplay = $color;
 						$letterToDisplay = $letter;
 					}
 					break;
+<<<<<<< HEAD
+=======
+
+>>>>>>> refs/remotes/origin/master
 				case "Y" :
 				if ($i > 2 && $j == 3 || $i > 2 && $j == 4 || $i < 4 && $j < 3  || $i < 4 && $j > 4) {
 					$colorToDisplay = $color;
 					$letterToDisplay = $letter;
 				}
 				break;
+<<<<<<< HEAD
+=======
+
+>>>>>>> refs/remotes/origin/master
 				case "Z" :
 					if (1) {
 						$colorToDisplay = $color;
 						$letterToDisplay = $letter;
 					}
 					break;
+<<<<<<< HEAD
+=======
+
+>>>>>>> refs/remotes/origin/master
 				case "!" :
 					if ($i == 4 && $j != 4 && $j != 5) {
 						$colorToDisplay = $color;
@@ -198,6 +276,7 @@ function drawLetter($letter, $color) {
 					}
 					break;
 			}//endSwitch
+<<<<<<< HEAD
 			if ($colorToDisplay == "rainbow") {
 				$colorToDisplay = "rgb(" . rand(0, 255) . ", " . rand(0, 255) . ", " . rand(0, 255) . ")";
 			}
@@ -205,11 +284,26 @@ function drawLetter($letter, $color) {
 			echo $letterToDisplay;
 			echo "</td>";
 		}//endFor columns
+=======
+
+
+			echo "<td style = 'background-color:$colorToDisplay'>";
+			echo $letterToDisplay;
+			echo "</td>";
+
+		}//endFor columns
+
+>>>>>>> refs/remotes/origin/master
 		echo "</tr>";
 	}//endFor rows
 	echo "</table>";
 }
 function drawDigit($digit, $color) {
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> refs/remotes/origin/master
 	echo "<table border = 1>";
 	for ($i = 0; $i < 8; $i++) {//Controls rows
 		echo "<tr>";
@@ -222,6 +316,7 @@ function drawDigit($digit, $color) {
 						$colorToDisplay = $color;
 						$digitToDisplay = $digit;
 					}
+
 					break;
 				case "2" :
 					if ($i == 4) {
@@ -235,20 +330,32 @@ function drawDigit($digit, $color) {
 						$digitToDisplay = $digit;
 					}
 					break;
+<<<<<<< HEAD
+=======
+
+>>>>>>> refs/remotes/origin/master
 				case "4" :
 					if (1) {
 						$colorToDisplay = $color;
 						$digitToDisplay = $digit;
 					}
 					break;
+<<<<<<< HEAD
+=======
+
+>>>>>>> refs/remotes/origin/master
 				case "5" :
 					if ($i < 2 || $i > 5 || $i == 3 || $i == 4 || ($j < 2 && $i < 4) || ($j > 5 && $i > 4)) {
 						$colorToDisplay = $color;
 						$digitToDisplay = $digit;
 					}
 					break;
+<<<<<<< HEAD
+=======
+
+>>>>>>> refs/remotes/origin/master
 				case "6" :
-					if (1) {
+					if ($i < 1 || $j < 2 || $i > 6 || ($i > 3 && $j > 5) || $i == 4) {
 						$colorToDisplay = $color;
 						$digitToDisplay = $digit;
 					}
@@ -265,6 +372,10 @@ function drawDigit($digit, $color) {
 						$digitToDisplay = $digit;
 					}
 					break;
+<<<<<<< HEAD
+=======
+
+>>>>>>> refs/remotes/origin/master
 				case "9" :
 					if ($i == 0 || $i == 3 || $j > 6 || $j == 0 && $i < 4) {
 						$colorToDisplay = $color;
@@ -272,15 +383,25 @@ function drawDigit($digit, $color) {
 					}
 					break;
 			}//endSwitch
+<<<<<<< HEAD
+=======
+
+>>>>>>> refs/remotes/origin/master
 			if ($colorToDisplay == "rainbow") {
 				$colorToDisplay = "rgb(" . rand(0, 255) . ", " . rand(0, 255) . ", " . rand(0, 255) . ")";
 			}
 			echo "<td style = 'background-color:$colorToDisplay'>";
 			echo $digitToDisplay;
 			echo "</td>";
+<<<<<<< HEAD
 		}//endFor columns
+=======
+
+		}//endFor columns
+
+>>>>>>> refs/remotes/origin/master
 		echo "</tr>";
 	}//endFor rows
 	echo "</table>\n";
 }
-?>
+
